@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 3.0 (September 3, 2021)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%!TEX program = xelatex
+% NOTE: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	10pt, % Default font size, can be between 8pt and 12pt
+]{FreemanCV}
+
+\columnratio{0.60, 0.40} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content 
+
+% Headers and footers can be added with the following commands: \lhead{}, \rhead{}, \lfoot{} and \rfoot{}
+% Example right footer:
+%\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CURRICULUM VITAE TITLE
+%----------------------------------------------------------------------------------------
+	
+{\sffamily\Huge\noindent Conor Masterson} % Your name
+	
+\medskip % Vertical whitespace
+	
+{\sffamily\large\noindent A natural team lead with over a decade of experience. Constantly pushing for improvement in both technical achievement and team culture. A mentor who loves teaching and helping team-mates excel.}
+\medskip
+
+\begin{paracol}{2} % Begin two-column mode
+
+%--------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%--------------------------------------------------------------------------
+% Review:
+% Don't worry about keeping to exactly one page
+% Avoid swapping between bullet-point and descriptiors
+% Add more distinction between H1, 2 and 3 (Title, Job Title and Position title)
+% Use 2 differnt fonts, replace Libertinus with Roboto. Consider a serif font for headings
+% Mozilla: Consider an opening paragraph followed by product specific points.
+% Consider swapping job title and company name positions
+% Max 6 bullets per job position
+% 8 words per bullet or less
+% Check Dimis messages for improved points.
+
+\jobentry
+	{Mozilla - Senior Software Engineer}
+    {March 2023 - Feb 2024}
+    {\textbf{Pocket} \\ 
+    Outside of standard feature work I pushed to make Pocket iOS a truly Open Source project.
+    I updated documentation \& dependencies to enable outside contributors to build and run the project enabling them to contribute fixes and updates to the codebase.\par\vspace{1mm}
+    \textbf{Mozilla Social} \\
+    I worked to begin adoption of Application Services and it's integrations by building prototypes, creating or enhancing necessary documentation and organising meetings with key stakeholders.\\
+    I built modules that would be key to the Social experience.\\
+    I took initiative in uncertain times to build a PoC app and get into market as quickly and cheaply as possible.}
+
+%------------------------------------------------
+
+\jobentry
+	{Intuit - Senior Software Engineer}
+	{June 2020 - Aug 2022}
+	{Acted as the team lead for TurboTax iOS.\\
+    Actively improved team culture through open communication, social activity, routine check-ins and mentoring.\\
+    Helped architect the TurboTax Platform's modular codebase.\\
+    Aided my Technical Manager with goals and planning.\\
+    Modernised legacy code, removing tech-debt and improving testing.\\
+    Improved the team's Agile process and rituals.\\
+    Lead development of on-boarding and off-boarding documentation.\\
+    Liaised with teams to adopt our Platform modules.\\
+    Authored technical retrospectives and team improvement plans.}
+
+%------------------------------------------------
+
+\jobentry
+	{TouchBistro - Software Engineer}
+    {July 2019 - June 2020}
+    {Created and improved integrations for new payment terminals into the TouchBistro POS.\\
+    Maintained a high level of testing using Quick/Nimble.\\
+    Lead an effort to standardise UI components with a library: TBUIKit.\\
+    Focused on making the components reliable, easy to implement and easy to discover.\\
+    Added new process, testing and documentation methodologies to build confidence in TBUIKit.}
+
+%------------------------------------------------
+
+\jobentry
+    {Clearbridge Mobile - Senior Software Engineer}
+    {October 2017 - July 2019}
+    {Worked as a consultant for different companies providing rapid solutions and expertise.\\
+    - Bell Media's Crave rebuild for iOS and AppleTV\\
+    - TD Bank's International Transfer module\\
+    - Chatr's Client app \& NBC Sports iOS app}
+    
+
+%------------------------------------------------
+
+\jobentry
+    {Marino Software - Software Engineer}
+    {April 2013 - July 2019}
+    {Created new games and experiences for the Curious George franchise\\
+    Crafted games using Cocos2DX with C++ for the RTE Junior app\\
+    Added functionality to the Lottery.ie app}
+
+%------------------------------------------------
+
+\jobentry
+    {Unum Ireland - Programmer Analyst}
+    {October 2010 - April 2013}
+    {Worked on the UnumBenefits.com web portal.\\
+    Used C\# and ASP.NET to build new features and fix issues.}
+    
+%----------------------------------------------------------------------------------------
+
+\switchcolumn % Switch to the second (right) column
+
+%----------------------------------------------------------------------------------------
+%	COLORED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+\section{Contact} 
+\begin{tabular}{c | l}
+    {\faPhone} & +1 (647) 705-9157 \\ % Phone number
+	{\small\faEnvelope} & \href{mailto:cdamasterson@gmail.com}{cdamasterson@gmail.com} \\ % Email address, standard icon is too large.
+	{\faGithub} & \href{https://github.com/CMasterson}{CMasterson} \\ % Website
+	{\faLinkedinSquare} & \href{https://www.linkedin.com/in/conor-masterson/}{conor-masterson} \\ % LinkedIn profile
+    {\faMapMarker} & Toronto, Ontario. CA. \\ % Address, nudge the icon right to align it.
+\end{tabular}
+\medskip
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+Bachelor of Science (Hons)\\
+Computer Games Development
+\medskip
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{tabular}{@{}lll} 
+Swift & Objective-C & C\# \\
+UIKit & SwiftUI & Async/Await \\
+Testing & Version Control & Architecture \\
+Team Dynamics & REST & Databases
+\end{tabular}
+\medskip
+%----------------------------------------------------------------------------------------
+%	Hobbies & Interests
+%----------------------------------------------------------------------------------------
+
+\section{Hobbies \& Interests}
+\subsection{Coding}
+I like to tinker with ideas and languages.\\
+I build tools in Python to help friends and family. I have experimented in Golang to build a replica of the WWII Enigma encryption machine. For Nuit Blanche I helped bring a statue to life with Arduino. I have been teaching myself Unity using C\# with the intention of creating simple games.\\
+Most recently I learned \LaTeX to create this resume.
+\subsection{Makerspace}
+I volunteer as the Chair of the Board of Directors for a Toronto makerspace and spend my time ensuring that our membership has a safe space to create and learn. We cater to a wide array of disciplines and offer classes to the general public.
+\subsection{Climbing}
+I was introduced to bouldering by a co-op and now head to the climbing gym at least once a week. I thoroughly enjoy the combination of physicality and problem solving required.
+\subsection{Outdoors}
+When the weather permits my partner and I go to Seaton Park to the outdoor archery range. We also travel to the Escarpment for hikes and Algonquin Park for portaging trips with friends.
+\subsection{Gaming}
+In my down time I enjoy catching up on some new releases and revisiting older, classic video games.\\
+At least weekly I meet with friends to play tabletop games.
+I regularly play in and occasionally run D\&D 5e campaigns.
+
+%----------------------------------------------------------------------------------------
+
+\end{paracol} % End two-column mode
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
