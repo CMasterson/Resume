@@ -44,7 +44,7 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage[
-	a4paper, % Paper size
+	legalpaper, % Paper size
 	top=1.75cm, % Top margin
 	bottom=1.75cm, % Bottom margin
 	left=1.25cm, % Left margin
@@ -69,32 +69,7 @@
 %	FONTS
 %----------------------------------------------------------------------------------------
 
-\usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
-\defaultfontfeatures{Ligatures=TeX} % To support LaTeX ligatures (e.g. `` and --)
-\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
-
-% The serif font used by default or explicitly with \textrm{}/\rmfamily
-%\setmainfont{EBGaramond}[
-%	UprightFont=*-Regular.ttf,
-%	BoldFont=*-Bold.ttf,
-%	BoldItalicFont=*-BoldItalic.ttf,
-%	ItalicFont=*-Italic.ttf,
-%	SmallCapsFont=*-SC.ttf
-%]
-\setmainfont{LibertinusSans}[
-	UprightFont=*-Regular.otf,
-	BoldFont=*-Bold.otf,
-	ItalicFont=*-Italic.otf
-]
-
-% The sans serif font used explicitly with \textsf{}\sffamily
-\setsansfont{LibertinusSans}[
-	UprightFont=*-Regular.otf,
-	BoldFont=*-Bold.otf,
-	ItalicFont=*-Italic.otf
-]
-
-\newfontfamily{\cursivefont}{freebooterscript} % New font family for the cursive font Freebooter Script
+\usepackage{roboto-serif}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
 
 \newfontfamily{\FA}{FontAwesome} % Create a new font family for FontAwesome icons
 \input{Fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the Fonts folder
@@ -121,7 +96,7 @@
 \titleformat
 	{\section} % Section type being modified
 	[block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
-	{\large\bfseries} % Text formatting of the whole section, i.e. label and title
+	{\sffamily\large\bfseries} % Text formatting of the whole section, i.e. label and title
 	{} % Section label (e.g. number) and its formatting
 	{0pt} % Horizontal space between the section label and title
 	{} % Code before the section title
@@ -134,7 +109,7 @@
 \titleformat
 	{\subsection} % Section type being modified
 	[block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
-	{\bfseries} % Text formatting of the whole section, i.e. label and title
+	{\sffamily\bfseries} % Text formatting of the whole section, i.e. label and title
 	{} % Section label (e.g. number) and its formatting
 	{0pt} % Horizontal space between the section label and title
 	{} % Code before the section title
@@ -172,8 +147,8 @@
 
 % Command for adding a new job entry (work experience)
 \newcommand{\jobentry}[3]{
-	{\raggedright\large\textbf{#1} \\ % Employer
-    \raggedright\small{#2}}\medskip \\ % Duration
+	{\sffamily\raggedright\large\textbf{#1} \\ % Employer
+    \normalfont\raggedright\small{#2}}\medskip \\ % Duration
 	#3 % Description
 	\medskip % Vertical whitespace
 }
