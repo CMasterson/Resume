@@ -23,6 +23,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build
-        uses: xu-cheng/latex-action@v3.2.0
+        uses: xu-cheng/latex-action@3.2.0
         with:
           root_file: template.tex
