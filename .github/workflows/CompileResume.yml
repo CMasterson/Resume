@@ -28,5 +28,4 @@ jobs:
 
       - uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            ./Resume2024/template.tex
+          root_file: template.tex
