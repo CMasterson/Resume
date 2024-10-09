@@ -26,3 +26,6 @@ jobs:
         uses: xu-cheng/latex-action@3.2.0
         with:
           root_file: Resume.tex
+          extra_fonts: |
+            ./Fonts/*.ttf
+            ./Fonts/*.otf
