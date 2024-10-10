@@ -43,26 +43,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-
-      - name: Create a Release
-        uses: elgohr/Github-Release-Action@v5
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          title: "Release ${{ steps.date.outputs.date }}"
-          tag: ${{ steps.date.outputs.date }}.${{ github.run_number }}
-
       - name: Download artifact
         uses: actions/download-artifact@v4.1.8
         with:
           name: resume
           path: ./  # Download to current directory
 
-      - name: Release
-        uses: softprops/action-gh-release@v2.0.8
-        with:
-          files: Resume.pdf
+      - name: Set up GitHub CLI
+        run: sudo apt-get install -y gh
+  
+      - name: Set Tag with Date and Build Number
+        id: date_tag
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          TAG="${DATE}-${{ github.run_number }}"
+          echo "TAG=$TAG" >> $GITHUB_ENV
+  
+      - name: Create Git Tag
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git tag ${{ env.TAG }}
+          git push origin ${{ env.TAG }}
+  
+
+      - name: Create Release with Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ env.TAG }} --title "Release ${{ env.TAG }}" --notes "Automated release for ${{ env.TAG }}" --assets Resume.pdf
       
