@@ -56,7 +56,7 @@ jobs:
         id: date_tag
         run: |
           DATE=$(date +'%Y-%m-%d')
-          TAG="${DATE}-${{ github.run_number }}"
+          TAG="${DATE}_${{ github.run_number }}"
           echo "TAG=$TAG" >> $GITHUB_ENV
   
       - name: Create Git Tag
@@ -65,12 +65,15 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git tag ${{ env.TAG }}
           git push origin ${{ env.TAG }}
-  
 
       - name: Create Release with Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create ${{ env.TAG }} --title "Release ${{ env.TAG }}" --notes "Automated release for ${{ env.TAG }}"
-          gh release upload $${{ env.TAG }} Resume.pdf
+          gh release create ${{ env.TAG }} --title "Release ${{ env.TAG }}"
       
+      - name: Attach PDF to release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload $${{ env.TAG }} Resume.pdf
