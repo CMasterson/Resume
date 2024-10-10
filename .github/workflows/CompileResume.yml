@@ -30,3 +30,8 @@ jobs:
             ./Fonts/*.ttf
             ./Fonts/*.otf
           args: -xelatex
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume
+          path: Resume.pdf
