@@ -59,12 +59,12 @@ jobs:
           TAG="${DATE}_${{ github.run_number }}"
           echo "TAG=$TAG" >> $GITHUB_ENV
   
-      - name: Create Git Tag
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git tag ${{ env.TAG }}
-          git push origin ${{ env.TAG }}
+      # - name: Create Git Tag
+      #   run: |
+      #     git config --global user.name "github-actions"
+      #     git config --global user.email "github-actions@github.com"
+      #     git tag ${{ env.TAG }}
+      #     git push origin ${{ env.TAG }}
 
       - name: Create Release with Asset
         env:
