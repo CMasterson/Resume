@@ -71,5 +71,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create ${{ env.TAG }} --title "Release ${{ env.TAG }}" --notes "Automated release for ${{ env.TAG }}" --assets Resume.pdf
+          gh release create ${{ env.TAG }} --title "Release ${{ env.TAG }}" --notes "Automated release for ${{ env.TAG }}"
+          gh release upload $${{ env.TAG }} Resume.pdf
       
