@@ -70,10 +70,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create ${{ env.TAG }} --title "Release ${{ env.TAG }}"
+          gh release create ${{ env.TAG }} Resume.pdf
       
-      - name: Attach PDF to release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload $${{ env.TAG }} Resume.pdf
